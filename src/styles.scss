@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Space+Grotesk:wght@300&display=swap');
+
+// $bgColor: #131722;
+// $lightBgColor: #24baef;
+// $bgTransparent: rgba(36, 186, 239, 0.6);
+// $fontColor: #fff;
+// $borderColor: #a8a8a83d;
+// $borderHeight: 1px;
+// $secondFontColor: #949cb0;
+
+$bgColor: #000;
+$lightBgColor: #171717;
+$bgTransparent: #a8a8a83d;
+$fontColor: #FFF;
+$borderColor: #a8a8a83d;
+$borderHeight: 1px;
+$firstColor: #DA0037;
+
+
+
+body{
+  background-color: $bgColor;
+  color:$fontColor;
+  font-family: 'Space Grotesk', sans-serif;
+}
+a{
+  font-size: 18px;
+  color: $fontColor;
+  text-decoration: none;
+}
+
+.border{
+  height:1px;
+  background-color: $borderColor;
+}
+.second-color{
+  color: $firstColor;
+}
+.vote{
+  background-color:  $firstColor;
+  padding:5px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 10px
+}

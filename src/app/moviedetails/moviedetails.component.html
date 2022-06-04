@@ -1,0 +1,21 @@
+<section >
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-lg-4 col-md-4">
+      <img class="w-100" [src]="imgPrefix+movieDetails?.poster_path" alt="">
+    </div>
+    <div class="col-lg-8 col-md-8">
+      <h2>{{movieDetails.title}}{{movieDetails.name}}</h2>
+      <h4 class="h6">{{movieDetails.tagline}}</h4>
+      <button *ngFor="let gen of movieDetails.genres" class="btn btn-info m-2">{{gen.name}}</button>
+      <div class="d-flex flex-column ">
+        <span class="h6 m-2"> Vote Average: {{movieDetails.vote_average}} </span>
+        <span class="h6 m-2"> Vote Count: {{movieDetails.vote_count}} </span>
+        <span class="h6 m-2"> Popularity: {{movieDetails.popularity}} </span>
+        <span class="h6 m-2"> Released: {{movieDetails.release_date}} </span>
+      </div>
+      <p>{{movieDetails.overview}}</p>
+    </div>
+  </div>
+</div>
+</section>

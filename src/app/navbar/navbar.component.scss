@@ -1,0 +1,41 @@
+// .nav-link{
+//   font-size: 18px;
+//   color: $fontColor;
+//   text-decoration: none;
+// }
+// .nav-link:hover{
+//   font-size: 18px;
+//   color: $fontColor;
+//   text-decoration: none;
+// }
+@import '../../styles.scss';
+
+nav{
+  position: fixed;
+  z-index: 99;
+  background:transparent;
+  width:100%;
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 28px;
+    span{
+      color: $firstColor
+    }
+    .navbar-nav{
+      margin-inline-start: 20%;
+    }
+  }
+  ul{
+    li{
+      a{
+        color: $fontColor;
+        font-weight: 700;
+        transition: all 0.5s ease-in-out;
+      }
+      a:hover{
+        color: $firstColor;
+      }
+    }
+  }
+}
