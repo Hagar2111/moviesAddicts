@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MoviesComponent } from './movies/movies.component';
-import { NetworkComponent } from './network/network.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -28,7 +27,6 @@ import { SearchPipe } from './search.pipe';
     HomeComponent,
     AboutComponent,
     MoviesComponent,
-    NetworkComponent,
     LoginComponent,
     RegisterComponent,
     NavbarComponent,

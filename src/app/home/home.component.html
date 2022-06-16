@@ -40,8 +40,8 @@
     <div *ngFor="let tv of trendingTv|search:term" class="col-md-2">
       <div class="movie my-2 position-relative">
         <a target="_blank" routerLink="/moviedetails/{{tv.media_type}}/{{tv.id}}">
-          <img [src]="imgPrefix + tv.poster_path" [alt]="tv.title" class="w-100">
-          <h3 class="my-2 h6">{{tv.title}}</h3>
+          <img [src]="imgPrefix + tv.poster_path" [alt]="tv.name" class="w-100">
+          <h3 class="my-2 h6">{{tv.name}}</h3>
           <div class="vote">{{tv.vote_average}}</div>
         </a>
       </div>

@@ -1,13 +1,4 @@
-// .nav-link{
-//   font-size: 18px;
-//   color: $fontColor;
-//   text-decoration: none;
-// }
-// .nav-link:hover{
-//   font-size: 18px;
-//   color: $fontColor;
-//   text-decoration: none;
-// }
+
 @import '../../styles.scss';
 
 nav{
@@ -15,7 +6,7 @@ nav{
   z-index: 99;
   background:transparent;
   width:100%;
-
+  background-color: $bgColor;
   .navbar-brand {
     font-weight: 700;
     font-size: 28px;

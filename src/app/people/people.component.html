@@ -1,1 +1,12 @@
-<p>people works!</p>
+<section class="pt-5">
+    <div class="container">
+        <div class="row py-5">
+            <div *ngFor="let person of trendingPeople" class="col-md-3">
+                <div class="person text-center position-relative my-3 ">
+                    <img [src]="imgPrefix+person.profile_path" [alt]="person.name" class="w-100">
+                    <h3 class="my-2 h6">{{person.name}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

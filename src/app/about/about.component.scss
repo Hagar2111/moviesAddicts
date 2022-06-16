@@ -1,0 +1,16 @@
+@import '../../styles.scss';
+
+section{
+    height: 100vh;
+    h2{
+        font-weight: bold;
+        span{
+            color: $firstColor;
+        }
+    }
+    hr{
+        background-color: $bgTransparent;
+        height: 3px;
+        width: 150px;
+    }
+}

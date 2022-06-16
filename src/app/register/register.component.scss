@@ -1,0 +1,11 @@
+@import'../../styles.scss';
+
+form{
+
+    .btn{
+        background-color: $firstColor;
+        color: $fontColor;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

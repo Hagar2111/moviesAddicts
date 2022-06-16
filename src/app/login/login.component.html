@@ -1,28 +1,31 @@
-<div class="w-75 m-auto py-5">
+<section class="pt-5">
 
-  <div *ngIf="error.length > 0 " class="alert alert-danger">
-    <p>{{error}}</p>
+  <div class="w-75 m-auto py-5">
+
+    <div *ngIf="error.length > 0 " class="alert alert-danger">
+      <p>{{error}}</p>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)"  >
+
+      <div class="form-group my-2 ">
+        <label for="email">Email:</label>
+        <input formControlName="email" type="email" class="form-control" id="email">
+        <div class="alert alert-danger my-2" *ngIf="loginForm.get('email')?.errors != null && loginForm.get('email')?.touched">
+          <p *ngIf="loginForm.get('email')?.errors?.['required']" >email is Required</p>
+          <p *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.errors?.['pattern']" >Please Enter a Valid Email!</p>
+        </div>
+      </div>
+
+      <div class="form-group my-2 ">
+        <label for="password">Password:</label>
+        <input formControlName="password" type="password" class="form-control" id="password">
+        <div class="alert alert-danger my-2" *ngIf="loginForm.get('password')?.errors != null && loginForm.get('password')?.touched">
+          <p *ngIf="loginForm.get('password')?.errors?.['required']" >Password is Required</p>
+          <p *ngIf="loginForm.get('password')?.errors?.['pattern']" >Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters.</p>
+        </div>
+      </div>
+
+      <button [disabled]="loginForm.invalid" class="btn my-2" type="submit">Login</button>
+    </form>
   </div>
-  <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)">
-
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input formControlName="email" type="email" class="form-control" id="email">
-      <div class="alert alert-danger my-2" *ngIf="loginForm.get('email')?.errors != null && loginForm.get('email')?.touched">
-        <p *ngIf="loginForm.get('email')?.errors?.['required']" >email is Required</p>
-        <p *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.errors?.['pattern']" >Please Enter a Valid Email!</p>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input formControlName="password" type="password" class="form-control" id="password">
-      <div class="alert alert-danger my-2" *ngIf="loginForm.get('password')?.errors != null && loginForm.get('password')?.touched">
-        <p *ngIf="loginForm.get('password')?.errors?.['required']" >Password is Required</p>
-        <p *ngIf="loginForm.get('password')?.errors?.['pattern']" >Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters.</p>
-      </div>
-    </div>
-
-    <button [disabled]="loginForm.invalid" class="btn btn-info my-2" type="submit">Login</button>
-  </form>
-</div>
+</section>

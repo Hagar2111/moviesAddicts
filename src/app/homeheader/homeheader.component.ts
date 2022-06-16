@@ -19,7 +19,7 @@ export class HomeheaderComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     margin: 8,
-    navText: ['', ''],
+    navText: [ '<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>' ],
     responsive: {
       0: {
         items: 1

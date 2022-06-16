@@ -1,1 +1,15 @@
-<p>tv works!</p>
+<section class="pt-5">
+    <div class="container">
+        <div class="row py-5">
+            <div *ngFor="let show of tvShows" class="col-md-3">
+                <div class="show pb-2 my-3 position-relative">
+                    <a routerLink="/moviedetails/{{show.media_type}}/{{show.id}} "  target="_blank">
+                        <img [src]="imgPrefix+show.poster_path" class="w-100" [alt]="show.name">
+                        <h3 class="h6 text-center my-2"> {{show.name}} </h3>
+                        <div class="vote">{{show.vote_average}}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

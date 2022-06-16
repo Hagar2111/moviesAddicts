@@ -1,0 +1,15 @@
+@import '../../styles.scss';
+
+form{
+    margin: auto;
+    input{
+        width: 50%;
+    }
+    .btn{
+        background-color: $firstColor;
+        color: $fontColor;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+}
