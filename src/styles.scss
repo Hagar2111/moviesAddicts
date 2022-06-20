@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Space+Grotesk:wght@300&display=swap');
 
 
-$bgColor: #000;
+$bgColor: rgb(14, 13, 13);
 $lightBgColor: #171717;
-$bgTransparent: #a8a8a83d;
 $fontColor: #FFF;
 $borderColor: #a8a8a83d;
-$borderHeight: 1px;
-$firstColor: #c4055e;
+$borderHeight: 2px;
+$firstColor: #880d82;
 
 
 
@@ -16,6 +15,12 @@ body{
   background-color: $bgColor;
   color:$fontColor;
   font-family: 'Space Grotesk', sans-serif;
+}
+.active{
+  text-decoration: underline $firstColor solid $borderHeight;
+}
+.active:hover{
+  text-decoration-color: $borderColor;
 }
 a{
   font-size: 18px;
@@ -39,4 +44,20 @@ a{
   position: absolute;
   top: 0;
   left: 10px
+}
+
+.btn{
+  background-color: transparent;
+  border: $borderHeight solid $firstColor;
+  color: $firstColor;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.btn:hover{
+  background-color: $firstColor;
+  color: $fontColor;
+  cursor: pointer;
+}
+.btn:focus{
+  box-shadow: none;
 }

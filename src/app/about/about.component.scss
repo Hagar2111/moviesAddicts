@@ -9,8 +9,8 @@ section{
         }
     }
     hr{
-        background-color: $bgTransparent;
-        height: 3px;
+        background-color: $lightBgColor;
+        height: $borderHeight;
         width: 150px;
     }
 }

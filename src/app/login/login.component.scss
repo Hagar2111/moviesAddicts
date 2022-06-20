@@ -1,15 +1,33 @@
 @import '../../styles.scss';
 
-form{
-    margin: auto;
-    input{
-        width: 50%;
-    }
-    .btn{
-        background-color: $firstColor;
-        color: $fontColor;
-        font-weight: bold;
-        cursor: pointer;
-
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    form{
+        .form-group{
+            .alert{
+                background-color: $lightBgColor;
+                color: $fontColor;
+            }
+            label{
+                font-weight:bold;
+            }
+            .form-control{
+                border-width: 0 0 2px 0;
+                border-bottom-color: $borderColor;
+                background-color: $lightBgColor;
+                color: $fontColor;
+            }
+            .form-control:focus{
+                border:none;
+                color: $fontColor;
+                outline: none;
+                box-shadow: none;
+            }
+            
+        }
+        
     }
 }

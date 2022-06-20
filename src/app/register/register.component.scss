@@ -1,11 +1,3 @@
 @import'../../styles.scss';
-
-form{
-
-    .btn{
-        background-color: $firstColor;
-        color: $fontColor;
-        font-weight: bold;
-        cursor: pointer;
-    }
-}
+@import '../login/login.component.scss';
+//All form styles are imported from login sass component

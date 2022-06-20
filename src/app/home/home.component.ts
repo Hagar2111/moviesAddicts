@@ -9,6 +9,7 @@ import { MoviesService } from '../movies.service';
 export class HomeComponent implements OnInit , OnDestroy {
   sub:any;
   term:any='';
+  moviesData:any;
   trendingMovies:any[] = [];
   trendingTv:any[] = [];
   trendingPeople:any[] = [];
@@ -19,21 +20,33 @@ export class HomeComponent implements OnInit , OnDestroy {
 
   ngOnInit(): void {
 
-    this.sub = this._MoviesService.getTrending('movie').subscribe((data)=> {
+    this.sub = this._MoviesService.getTrending('all').subscribe((data)=> {
 
-      this.trendingMovies = data.results.slice(0,10);
+    this.trendingMovies = data.results.filter((item:any)=>{
+
+      return item.media_type =='movie';
+    
+      }) 
+
+      this.trendingTv = data.results.filter((item:any)=>{
+
+        return item.media_type== 'tv';
+      })
+
     });
 
-    this.sub = this._MoviesService.getTrending('tv').subscribe((data)=> {
-
-      this.trendingTv = data.results.slice(0,10);
-    });
-
+    
     this.sub = this._MoviesService.getTrending('person').subscribe((data)=> {
 
       this.trendingPeople = data.results.slice(0,10);
 
     });
+
+    // this.sub = this._MoviesService.getTrending('tv').subscribe((data)=> {
+
+    //   this.trendingTv = data.results.slice(0,10);
+    // });
+
   }
 
   ngOnDestroy():void{
