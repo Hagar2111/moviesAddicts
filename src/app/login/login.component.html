@@ -1,4 +1,4 @@
-<section class="">
+<section >
     <div class=" row justify-content-center align-content-center py-5 my-auto ">
       <div class="col-md-8">
         <div *ngIf="error.length > 0 " class="alert w-75 ">
@@ -6,7 +6,7 @@
         </div>
       </div>
       <div class="col-md-8">
-        <form class="w-75" [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)"  >
+        <form class="w-75 m-auto " [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)"  >
 
           <div class="form-group mb-2 ">
             <label for="email">Email:</label>
