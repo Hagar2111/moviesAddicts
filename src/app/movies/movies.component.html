@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row py-5">
             <div *ngFor="let movie of trendingMovies " class="col-md-3">
-                <div class="movie pb-2 my-3 position-relative">
+                <div class="movie box pb-2 my-3 position-relative">
                     <a target="_blank" routerLink="/moviedetails/{{movie.media_type}}/{{movie.id}}" >
                         <img [src]="imgPrefix+movie.poster_path" class="w-100" [alt]="movie.title">
                         <h3 class="h6 text-center my-2">{{movie.title}}</h3>

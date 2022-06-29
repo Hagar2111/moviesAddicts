@@ -2,8 +2,8 @@
 
 <div class="container">
 
-  <input [(ngModel)]="term" class="form-control w-50 mt-5 mx-auto" type="search" placeholder="Search here.." aria-label="Search">
-
+    <input [(ngModel)]="term" class="form-control w-50 mt-5 mx-auto" type="search" placeholder="Search.." aria-label="Search">
+  
   <div class="row py-5">
     <div class="col-md-4 d-flex align-items-center">
       <div>
@@ -16,10 +16,10 @@
       </div>
     </div>
     <div *ngFor="let movie of trendingMovies|search:term" class="col-md-2">
-      <div class="movie my-2 position-relative">
+      <div class="movie box my-2 position-relative">
         <a routerLink="/moviedetails/{{movie.media_type}}/{{movie.id}}">
           <img [src]="imgPrefix+movie.poster_path" [alt]="movie.title" class="w-100">
-          <h3 class="my-2 h6">{{movie.title}}</h3>
+          <h3 class="my-2 px-2 pb-2 h6">{{movie.title}}</h3>
           <div class="vote">{{movie.vote_average}}</div>
         </a>
       </div>
@@ -38,10 +38,10 @@
       </div>
     </div>
     <div *ngFor="let tv of trendingTv|search:term" class="col-md-2">
-      <div class="movie my-2 position-relative">
+      <div class="movie box my-2 position-relative">
         <a routerLink="/moviedetails/{{tv.media_type}}/{{tv.id}}">
           <img [src]="imgPrefix + tv.poster_path" [alt]="tv.name" class="w-100">
-          <h3 class="my-2 h6">{{tv.name}}</h3>
+          <h3 class="my-2 px-2 h6">{{tv.name}}</h3>
           <div class="vote">{{tv.vote_average}}</div>
         </a>
       </div>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div *ngFor="let person of trendingPeople" class="col-md-2">
-      <div class="movie my-2 position-relative">
+      <div class="movie box my-2 position-relative">
           <img [src]="imgPrefix+person.profile_path" [alt]="person.name" class="w-100">
           <h3 class="my-2 h6">{{person.name}}</h3>
       </div>

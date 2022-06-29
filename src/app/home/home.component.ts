@@ -26,12 +26,12 @@ export class HomeComponent implements OnInit , OnDestroy {
 
       return item.media_type =='movie';
     
-      }) 
+      }).slice(0, 10);
 
       this.trendingTv = data.results.filter((item:any)=>{
 
         return item.media_type== 'tv';
-      })
+      }).slice(0, 10);
 
     });
 

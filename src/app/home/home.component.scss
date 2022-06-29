@@ -1,2 +1,28 @@
 @import '../../styles.scss';
 
+.form-control{
+    border-width: 0 0 0 2px;
+    border-left-color: $borderColor;
+    background-color: transparent;
+    border-radius: 0;
+    color: $fontColor;
+    transition: all 0.5s ease-in-out;
+}
+.form-control:hover{
+    box-shadow: 0 0 10px;
+}
+.form-control:focus{
+    border:none;
+    background-color: $lightBgColor;
+    color: $fontColor;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+h3{
+    height: 60px;
+}
+p{
+    font-weight: bold;
+}
