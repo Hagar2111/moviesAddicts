@@ -1,13 +1,19 @@
 <section >
+  <div class="container pt-5">
+
     <div class=" row justify-content-center align-content-center py-5 my-auto ">
-      <div class="col-md-8">
-        <div *ngIf="error.length > 0 " class="alert w-75 ">
+      <div class="col-lg-6">
+        <div *ngIf="error.length > 0 " class="alert">
           <p>{{error}}</p>
         </div>
       </div>
-      <div class="col-md-8">
-        <form class="w-75 m-auto " [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)"  >
+    </div>
 
+      
+    <form class=" m-auto " [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)"  >
+      <div class="row justify-content-center align-content-center flex-column ">
+
+        <div class="col-lg-6">
           <div class="form-group mb-2 ">
             <label for="email">Email:</label>
             <input formControlName="email" type="email" class="form-control" id="email">
@@ -16,7 +22,9 @@
               <p *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.errors?.['pattern']" >Please Enter a Valid Email!</p>
             </div>
           </div>
+          </div>
 
+        <div class="col-lg-6">
           <div class="form-group mb-2 ">
             <label for="password">Password:</label>
             <input formControlName="password" type="password" class="form-control" id="password">
@@ -25,9 +33,14 @@
               <p *ngIf="loginForm.get('password')?.errors?.['pattern']" >Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters.</p>
             </div>
           </div>
+        </div>
 
+        <div class="col-lg-6">
           <button [disabled]="loginForm.invalid" class="btn my-2" type="submit">Login</button>
-        </form>
+        </div>
+
       </div>
-    </div>
+    </form>
+
+  </div>
 </section>

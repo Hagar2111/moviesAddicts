@@ -1,65 +1,80 @@
 <section >
-  <div class=" row justify-content-center align-content-center py-5 my-auto">
-    <div class="col-md-8  ">
-      <div *ngIf="error.length > 0 " class="alert w-75 ">
-        <p>{{error}}</p>
+  <div class="container  ">
+
+    <div class=" row justify-content-center align-content-center py-5 my-auto">
+      <div class="col-lg-6  ">
+        <div *ngIf="error.length > 0 " class="alert ">
+          <p>{{error}}</p>
+        </div>
       </div>
     </div>
-    <div class="col-md-8">
-      <form class="w-75 m-auto" [formGroup]="registerForm" (ngSubmit)="submitRegisterForm(registerForm)">
-
-        <div class="form-group my-2 pt-5 ">
-          <label for="first_name">FirstName:</label>
-          <input formControlName="first_name" type="text" class="form-control" id="first_name">
-          <div class="alert my-2" *ngIf="registerForm.get('first_name')?.errors != null && registerForm.get('first_name')?.touched">
-            <p *ngIf="registerForm.get('first_name')?.errors?.['required']"> first_name is Required</p>
-            <p *ngIf="registerForm.get('first_name')?.errors?.['minLength']"> first_name is Min Lengh 3 car</p>
-            <p *ngIf="registerForm.get('first_name')?.errors?.['maxLength']"> first_name is Max Lengh 10 car</p>
-            <p *ngIf="registerForm.get('first_name')?.errors?.['pattern']"> Please, Enter a valid name and start with uppercase</p>
+    
+    <form class=" m-auto" [formGroup]="registerForm" (ngSubmit)="submitRegisterForm(registerForm)">
+      <div class="row justify-content-center align-content-center flex-column">
+        <div class="col-lg-6">
+          <div class="form-group my-2 pt-5 ">
+            <label for="first_name">FirstName:</label>
+            <input formControlName="first_name" type="text" class="form-control" id="first_name">
+            <div class="alert my-2" *ngIf="registerForm.get('first_name')?.errors != null && registerForm.get('first_name')?.touched">
+              <p *ngIf="registerForm.get('first_name')?.errors?.['required']"> first_name is Required</p>
+              <p *ngIf="registerForm.get('first_name')?.errors?.['minLength']"> first_name is Min Lengh 3 car</p>
+              <p *ngIf="registerForm.get('first_name')?.errors?.['maxLength']"> first_name is Max Lengh 10 car</p>
+              <p *ngIf="registerForm.get('first_name')?.errors?.['pattern']"> Please, Enter a valid name and start with uppercase</p>
+            </div>
           </div>
         </div>
 
-        <div class="form-group my-2 ">
-          <label for="last_name">LastName:</label>
-          <input formControlName="last_name" type="text" class="form-control" id="last_name">
-          <div class="alert my-2" *ngIf="registerForm.get('last_name')?.errors != null && registerForm.get('last_name')?.touched">
-            <p *ngIf="registerForm.get('last_name')?.errors?.['required']" >last_name is Required</p>
-            <p *ngIf="registerForm.get('last_name')?.errors?.['minLength']" >last_name is Min Lengh 3 car</p>
-            <p *ngIf="registerForm.get('last_name')?.errors?.['maxLength']" >last_name is Max Lengh 10 car</p>
-            <p *ngIf="registerForm.get('last_name')?.errors?.['pattern']"> Please, Enter a valid name and start with uppercase</p>
+        <div class="col-lg-6">
+          <div class="form-group my-2 ">
+            <label for="last_name">LastName:</label>
+            <input formControlName="last_name" type="text" class="form-control" id="last_name">
+            <div class="alert my-2" *ngIf="registerForm.get('last_name')?.errors != null && registerForm.get('last_name')?.touched">
+              <p *ngIf="registerForm.get('last_name')?.errors?.['required']" >last_name is Required</p>
+              <p *ngIf="registerForm.get('last_name')?.errors?.['minLength']" >last_name is Min Lengh 3 car</p>
+              <p *ngIf="registerForm.get('last_name')?.errors?.['maxLength']" >last_name is Max Lengh 10 car</p>
+              <p *ngIf="registerForm.get('last_name')?.errors?.['pattern']"> Please, Enter a valid name and start with uppercase</p>
+            </div>
           </div>
         </div>
 
-        <div class="form-group my-2 ">
-          <label for="age">Your Age:</label>
-          <input formControlName="age" type="number" class="form-control" id="age">
-          <div class="alert my-2" *ngIf="registerForm.get('age')?.errors != null && registerForm.get('age')?.touched">
-            <p *ngIf="registerForm.get('age')?.errors?.['required']" >Age is Required</p>
-            <p *ngIf="registerForm.get('age')?.errors?.['min']" >Age is Min 16 years</p>
-            <p *ngIf="registerForm.get('age')?.errors?.['max']" >Age is Max 80 years</p>
+        <div class="col-lg-6">
+          <div class="form-group my-2 ">
+            <label for="age">Your Age:</label>
+            <input formControlName="age" type="number" class="form-control" id="age">
+            <div class="alert my-2" *ngIf="registerForm.get('age')?.errors != null && registerForm.get('age')?.touched">
+              <p *ngIf="registerForm.get('age')?.errors?.['required']" >Age is Required</p>
+              <p *ngIf="registerForm.get('age')?.errors?.['min']" >Age is Min 16 years</p>
+              <p *ngIf="registerForm.get('age')?.errors?.['max']" >Age is Max 80 years</p>
+            </div>
           </div>
         </div>
 
-        <div class="form-group my-2 ">
-          <label for="email">Email:</label>
-          <input formControlName="email" type="email" class="form-control" id="email">
-          <div class="alert my-2" *ngIf="registerForm.get('email')?.errors != null && registerForm.get('email')?.touched">
-            <p *ngIf="registerForm.get('email')?.errors?.['required']" >email is Required</p>
-            <p *ngIf="registerForm.get('email')?.errors?.['email'] && registerForm.get('email')?.errors?.['pattern']" >Please enter a Valid Email!</p>
+        <div class="col-lg-6">
+          <div class="form-group my-2 ">
+            <label for="email">Email:</label>
+            <input formControlName="email" type="email" class="form-control" id="email">
+            <div class="alert my-2" *ngIf="registerForm.get('email')?.errors != null && registerForm.get('email')?.touched">
+              <p *ngIf="registerForm.get('email')?.errors?.['required']" >email is Required</p>
+              <p *ngIf="registerForm.get('email')?.errors?.['email'] && registerForm.get('email')?.errors?.['pattern']" >Please enter a Valid Email!</p>
+            </div>
           </div>
         </div>
 
-        <div class="form-group my-2">
-          <label for="password">Password:</label>
-          <input formControlName="password" type="password" class="form-control" id="password">
-          <div class="alert my-2" *ngIf="registerForm.get('password')?.errors != null && registerForm.get('password')?.touched">
-            <p *ngIf="registerForm.get('password')?.errors?.['required']" >Password is Required</p>
-            <p *ngIf="registerForm.get('password')?.errors?.['pattern']" >Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters</p>
+        <div class="col-lg-6">
+          <div class="form-group my-2">
+            <label for="password">Password:</label>
+            <input formControlName="password" type="password" class="form-control" id="password">
+            <div class="alert my-2" *ngIf="registerForm.get('password')?.errors != null && registerForm.get('password')?.touched">
+              <p *ngIf="registerForm.get('password')?.errors?.['required']" >Password is Required</p>
+              <p *ngIf="registerForm.get('password')?.errors?.['pattern']" >Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters</p>
+            </div>
           </div>
         </div>
 
-        <button [disabled]="registerForm.invalid" class="btn my-2" type="submit">Register</button>
-      </form>
-    </div>
+        <div class="col-lg-6">
+          <button [disabled]="registerForm.invalid" class="btn my-2" type="submit">Register</button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
